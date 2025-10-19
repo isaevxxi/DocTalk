@@ -14,7 +14,7 @@ from app.core.database import async_session_maker, engine
 from app.schemas.health import HealthCheckResponse, HealthStatus, ServiceHealth
 from app.services.diarization import get_diarization_service
 from app.services.storage import MinIOService
-from app.services.whisper import get_whisper_service
+from app.services.transcription import get_whisper_service
 
 logger = logging.getLogger(__name__)
 
