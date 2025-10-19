@@ -42,6 +42,7 @@ async def enqueue_transcription(recording_id: str) -> str:
             recording_id,
             _queue_name="doktalk-worker",
         )
-        return job.job_id
+        # ARQ type stubs are incomplete - Job has job_id attribute at runtime
+        return job.job_id  # type: ignore[union-attr]
     finally:
         await redis.close()

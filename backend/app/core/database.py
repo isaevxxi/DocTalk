@@ -75,6 +75,57 @@ async def get_db_session() -> AsyncGenerator[AsyncSession, None]:
             await session.close()
 
 
+@asynccontextmanager
+async def get_db_session_for_tenant(tenant_id: UUID) -> AsyncGenerator[AsyncSession, None]:
+    """
+    Get database session with tenant isolation via RLS (context manager style).
+
+    This is the context manager version of get_tenant_db(), recommended for use
+    in FastAPI endpoints to avoid mypy false positives with async generators.
+
+    Security Notes:
+    - Uses SET LOCAL (not SET) to ensure tenant_id is transaction-scoped
+    - Automatically resets when transaction ends (on commit/rollback)
+    - Safe with SQLAlchemy's built-in connection pooling (session mode)
+    - If using PgBouncer, ensure session pooling mode (not transaction mode)
+    - UUID validation prevents SQL injection
+
+    Args:
+        tenant_id: UUID of the tenant to isolate to
+
+    Yields:
+        AsyncSession with tenant context set
+
+    Raises:
+        ValueError: If tenant_id is invalid
+
+    Example:
+        ```python
+        async with get_db_session_for_tenant(current_user.tenant_id) as db:
+            result = await db.execute(select(Patient))
+            return result.scalars().all()  # Only returns patients for this tenant
+        ```
+    """
+    # Validate tenant_id to prevent SQL injection
+    if not isinstance(tenant_id, UUID):
+        raise ValueError(f"Invalid tenant_id type: {type(tenant_id)}")
+
+    async with async_session_maker() as session:
+        try:
+            # Set tenant_id for RLS policies (transaction-scoped with SET LOCAL)
+            tenant_id_str = str(tenant_id)
+            await session.execute(
+                text(f"SET LOCAL app.tenant_id = '{tenant_id_str}'")
+            )
+
+            yield session
+
+        finally:
+            # Note: SET LOCAL automatically resets at transaction end
+            # No explicit cleanup needed, but we ensure session is closed
+            pass
+
+
 async def get_db() -> AsyncGenerator[AsyncSession, None]:
     """
     Get database session without tenant isolation.

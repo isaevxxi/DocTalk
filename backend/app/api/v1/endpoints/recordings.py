@@ -10,7 +10,7 @@ from sqlalchemy import select
 
 from app.api.dependencies import User, get_current_active_user
 from app.core.config import settings
-from app.core.database import get_tenant_db
+from app.core.database import get_db_session_for_tenant
 from app.models.encounter import Encounter
 from app.models.recording import Recording, RecordingStatus
 from app.models.transcript import Transcript
@@ -93,7 +93,7 @@ async def upload_recording(
         )
 
     # Get tenant-scoped database session
-    async for db in get_tenant_db(current_user.tenant_id):
+    async with get_db_session_for_tenant(current_user.tenant_id) as db:
         # Verify encounter exists and belongs to tenant
         encounter_result = await db.execute(
             select(Encounter).where(Encounter.id == encounter_id)
@@ -204,7 +204,7 @@ async def get_recording(
     Returns:
         RecordingDetailResponse with recording status and transcript availability
     """
-    async for db in get_tenant_db(current_user.tenant_id):
+    async with get_db_session_for_tenant(current_user.tenant_id) as db:
         # Get recording
         recording_result = await db.execute(
             select(Recording).where(Recording.id == recording_id)

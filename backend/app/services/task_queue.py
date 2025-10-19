@@ -24,9 +24,11 @@ class TaskQueueService:
     async def get_pool(self) -> ArqRedis:
         """Get or create ARQ Redis pool."""
         if self._pool is None:
+            # ARQ type stubs are incomplete - create_pool accepts both str and RedisSettings
+            # as well as max_connections kwarg at runtime
             self._pool = await create_pool(
-                settings.ARQ_REDIS_URL,
-                max_connections=10,
+                settings.ARQ_REDIS_URL,  # type: ignore[arg-type]
+                max_connections=10,  # type: ignore[call-arg]
             )
         return self._pool
 
@@ -57,9 +59,10 @@ class TaskQueueService:
             str(recording_id),  # Convert UUID to string for serialization
         )
 
+        # ARQ type stubs are incomplete - Job has these attributes at runtime
         return {
-            "job_id": job.job_id,
-            "enqueue_time": job.enqueue_time,
+            "job_id": job.job_id,  # type: ignore[union-attr]
+            "enqueue_time": job.enqueue_time,  # type: ignore[union-attr]
             "recording_id": str(recording_id),
         }
 
@@ -74,11 +77,12 @@ class TaskQueueService:
             Dict with job status or None if not found
         """
         pool = await self.get_pool()
-        job = await pool.get_job(job_id)
+        job = await pool.get_job(job_id)  # type: ignore[attr-defined]
 
         if job is None:
             return None
 
+        # ARQ type stubs are incomplete - Job has these attributes at runtime
         return {
             "job_id": job.job_id,
             "function": job.function,

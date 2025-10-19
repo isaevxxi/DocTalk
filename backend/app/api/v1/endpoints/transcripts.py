@@ -8,7 +8,7 @@ from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.api.dependencies import User, get_current_active_user
-from app.core.database import get_tenant_db
+from app.core.database import get_db_session_for_tenant
 from app.models.transcript import Transcript
 from app.schemas.transcript import DiarizationSummary, TranscriptResponse
 from app.utils.diarization import expand_diarization_summary
@@ -47,7 +47,7 @@ async def get_transcript(
     Raises:
         404: Recording not found or transcript not available
     """
-    async for db in get_tenant_db(current_user.tenant_id):
+    async with get_db_session_for_tenant(current_user.tenant_id) as db:
         # Get transcript for recording
         transcript_result = await db.execute(
             select(Transcript).where(Transcript.recording_id == recording_id)
