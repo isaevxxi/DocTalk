@@ -117,7 +117,7 @@ class SileroVADService:
 
             # Convert to numpy array (float32, normalized to [-1, 1])
             samples = np.array(audio_segment.get_array_of_samples(), dtype=np.float32)
-            samples = samples / (2**15)  # Normalize 16-bit PCM to [-1, 1]
+            samples = samples / (2**15)  # Normalize 16-bit PCM to [-1, 1]  # type: ignore[assignment]
 
             # Convert to torch tensor
             wav_tensor = torch.from_numpy(samples)

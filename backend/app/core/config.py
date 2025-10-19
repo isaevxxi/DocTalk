@@ -39,10 +39,12 @@ class Settings(BaseSettings):
         """Parse CORS origins from comma-separated string or list."""
         if isinstance(v, str):
             return [origin.strip() for origin in v.split(",")]
-        return v
+        if isinstance(v, list):
+            return v
+        return []
 
     # Database
-    DATABASE_URL: PostgresDsn = Field(
+    DATABASE_URL: str = Field(
         default="postgresql+asyncpg://doktalk_user:password@localhost:5432/doktalk"
     )
     DB_POOL_SIZE: int = Field(default=20)
@@ -51,7 +53,7 @@ class Settings(BaseSettings):
     DB_POOL_RECYCLE: int = Field(default=3600)
 
     # Redis
-    REDIS_URL: RedisDsn = Field(default="redis://:password@localhost:6379/0")
+    REDIS_URL: str = Field(default="redis://:password@localhost:6379/0")
     CACHE_DEFAULT_TTL: int = Field(default=3600)
     CACHE_SESSION_TTL: int = Field(default=86400)
 

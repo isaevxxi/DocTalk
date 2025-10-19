@@ -1,7 +1,7 @@
 """Database connection and session management with tenant isolation."""
 
 from contextlib import asynccontextmanager
-from typing import AsyncGenerator
+from typing import Any, AsyncGenerator
 from uuid import UUID
 
 from sqlalchemy import event, text
@@ -25,7 +25,7 @@ engine = create_async_engine(
 # Pool event listener to reset connection state when returned to pool
 # This prevents tenant_id from "leaking" between requests if using transaction pooling
 @event.listens_for(Pool, "checkin")
-def receive_checkin(dbapi_conn, connection_record):
+def receive_checkin(dbapi_conn: Any, connection_record: Any) -> None:
     """
     Reset connection state when returned to pool.
 

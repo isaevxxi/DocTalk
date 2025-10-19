@@ -93,10 +93,10 @@ async def transcribe_recording(
             result = None
 
             # Create tasks for parallel execution
-            tasks = []
+            tasks: list[Any] = []
 
             # Task 1: Transcription (always runs)
-            async def run_transcription():
+            async def run_transcription() -> tuple[dict[str, Any], float]:
                 """Run Whisper transcription."""
                 trans_start = time.time()
                 try:
@@ -116,7 +116,7 @@ async def transcribe_recording(
 
             # Task 2: Diarization (only if enabled)
             if settings.DIARIZATION_ENABLED and diarization_service:
-                async def run_diarization():
+                async def run_diarization() -> tuple[dict[str, Any] | None, float]:
                     """Run speaker diarization."""
                     diar_start = time.time()
                     try:
