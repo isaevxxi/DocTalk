@@ -1,0 +1,1430 @@
+{
+  "text": "Добрый день, присаживайтесь, как вас зовут? Здравствуйте, Алексей. Алексей, что у вас беспокоит? Каши, третий день, температура, тридцать восемь чем-то. Каши, ты сухой или с макроты? Скорее и сухой, по утрам немного. А макроты есть ли там прозрачное, либо желтое? Да прозрачное, вроде. А когда началось? вторник, поздно с ночевого горла. Першение? Да, именно. Насморк, в горле, или одышко. Насморк есть, горло, как царапа, дышать нормально. А жара, понижающие, принимали? Да,-рацетому. По-рацетому, пиццот? Да, два раза вчера помогать на пару часов. А если аллергия на лекарство? пенцилинные сыльбы детстве. Хорошо, я это отмечу. А если хронические заболевания, давления, сахар, астма? Да, гипертония, лазартан, пятьдесят утра. Курения, алкоголь? Курилу, бросил два года, алкоголю, редко. А контакт заболевшими был? Да, коллега на работе, На прошлой неделе? На прошлой неделе. Понял. Откройте род, скажите, а? Миндалины, умерены красные, налета нет. Сейчас послушаю, лёгкие, выдох, вдох, выдох, дыхание визикулярных рипов нет. Температура держится. Ой, извините. Какая температура? 38 и 5 вчера вечером. Картина за вирусную идеологию. Антибиотик сейчас не показан.",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 5.46,
+      "text": "Добрый день, присаживайтесь, как вас зовут? Здравствуйте, Алексей. Алексей, что у вас беспокоит?",
+      "confidence": -0.49117827150556775,
+      "no_speech_prob": 0.08024820685386658,
+      "words": [
+        {
+          "word": " Добрый",
+          "start": 0.0,
+          "end": 0.44,
+          "probability": 0.7910565137863159
+        },
+        {
+          "word": " день,",
+          "start": 0.44,
+          "end": 0.66,
+          "probability": 0.9990535378456116
+        },
+        {
+          "word": " присаживайтесь,",
+          "start": 0.78,
+          "end": 1.42,
+          "probability": 0.9786397069692612
+        },
+        {
+          "word": " как",
+          "start": 1.58,
+          "end": 1.68,
+          "probability": 0.9763826131820679
+        },
+        {
+          "word": " вас",
+          "start": 1.68,
+          "end": 1.88,
+          "probability": 0.44831109046936035
+        },
+        {
+          "word": " зовут?",
+          "start": 1.88,
+          "end": 2.14,
+          "probability": 0.9935901165008545
+        },
+        {
+          "word": " Здравствуйте,",
+          "start": 2.48,
+          "end": 3.08,
+          "probability": 0.8364443778991699
+        },
+        {
+          "word": " Алексей.",
+          "start": 3.34,
+          "end": 3.86,
+          "probability": 0.9612141847610474
+        },
+        {
+          "word": " Алексей,",
+          "start": 4.14,
+          "end": 4.54,
+          "probability": 0.9547070562839508
+        },
+        {
+          "word": " что",
+          "start": 4.6,
+          "end": 4.76,
+          "probability": 0.9499121904373169
+        },
+        {
+          "word": " у",
+          "start": 4.76,
+          "end": 4.86,
+          "probability": 0.8180113434791565
+        },
+        {
+          "word": " вас",
+          "start": 4.86,
+          "end": 4.9,
+          "probability": 0.9438208341598511
+        },
+        {
+          "word": " беспокоит?",
+          "start": 4.9,
+          "end": 5.46,
+          "probability": 0.8986915946006775
+        }
+      ],
+      "hygiene": {
+        "original_word_count": 13,
+        "cleaned_word_count": 13,
+        "removed_word_count": 0,
+        "removed_words": null
+      },
+      "merged_segments": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "start": 6.48,
+      "end": 13.78,
+      "text": "Каши, третий день, температура, тридцать восемь чем-то. Каши, ты сухой или с макроты?",
+      "confidence": -0.49117827150556775,
+      "no_speech_prob": 0.08024820685386658,
+      "words": [
+        {
+          "word": " Каши,",
+          "start": 6.48,
+          "end": 7.08,
+          "probability": 0.7478299339612325
+        },
+        {
+          "word": " третий",
+          "start": 7.18,
+          "end": 7.56,
+          "probability": 0.7731329103310903
+        },
+        {
+          "word": " день,",
+          "start": 7.56,
+          "end": 7.86,
+          "probability": 0.998102605342865
+        },
+        {
+          "word": " температура,",
+          "start": 8.3,
+          "end": 8.96,
+          "probability": 0.9904514749844869
+        },
+        {
+          "word": " тридцать",
+          "start": 9.68,
+          "end": 10.1,
+          "probability": 0.7610828280448914
+        },
+        {
+          "word": " восемь",
+          "start": 10.1,
+          "end": 10.62,
+          "probability": 0.8730984330177307
+        },
+        {
+          "word": " чем",
+          "start": 10.88,
+          "end": 11.04,
+          "probability": 0.7339668869972229
+        },
+        {
+          "word": "-то.",
+          "start": 11.04,
+          "end": 11.3,
+          "probability": 0.9860191345214844
+        },
+        {
+          "word": " Каши,",
+          "start": 12.0,
+          "end": 12.64,
+          "probability": 0.8452373147010803
+        },
+        {
+          "word": " ты",
+          "start": 12.74,
+          "end": 12.74,
+          "probability": 0.3608243465423584
+        },
+        {
+          "word": " сухой",
+          "start": 12.74,
+          "end": 13.12,
+          "probability": 0.916440486907959
+        },
+        {
+          "word": " или",
+          "start": 13.12,
+          "end": 13.3,
+          "probability": 0.6586596369743347
+        },
+        {
+          "word": " с",
+          "start": 13.3,
+          "end": 13.46,
+          "probability": 0.7663795948028564
+        },
+        {
+          "word": " макроты?",
+          "start": 13.46,
+          "end": 13.78,
+          "probability": 0.6446832492947578
+        }
+      ],
+      "hygiene": {
+        "original_word_count": 15,
+        "cleaned_word_count": 14,
+        "removed_word_count": 1,
+        "removed_words": [
+          {
+            "word": " с",
+            "start": 10.62,
+            "end": 10.88,
+            "probability": 0.05326646938920021,
+            "removal_reason": "low_probability (0.053)"
+          }
+        ]
+      },
+      "merged_segments": [
+        3,
+        4
+      ]
+    },
+    {
+      "start": 15.32,
+      "end": 18.06,
+      "text": "Скорее и сухой, по утрам немного.",
+      "confidence": -0.49117827150556775,
+      "no_speech_prob": 0.08024820685386658,
+      "words": [
+        {
+          "word": " Скорее",
+          "start": 15.32,
+          "end": 15.96,
+          "probability": 0.9220238327980042
+        },
+        {
+          "word": " и",
+          "start": 15.96,
+          "end": 16.14,
+          "probability": 0.5563462972640991
+        },
+        {
+          "word": " сухой,",
+          "start": 16.14,
+          "end": 16.7,
+          "probability": 0.9921713074048361
+        },
+        {
+          "word": " по",
+          "start": 16.9,
+          "end": 17.22,
+          "probability": 0.9174681901931763
+        },
+        {
+          "word": " утрам",
+          "start": 17.22,
+          "end": 17.58,
+          "probability": 0.7681578199068705
+        },
+        {
+          "word": " немного.",
+          "start": 17.58,
+          "end": 18.06,
+          "probability": 0.9423195719718933
+        }
+      ],
+      "hygiene": {
+        "original_word_count": 6,
+        "cleaned_word_count": 6,
+        "removed_word_count": 0,
+        "removed_words": null
+      },
+      "merged_segments": [
+        5
+      ]
+    },
+    {
+      "start": 19.2,
+      "end": 27.12,
+      "text": "А макроты есть ли там прозрачное, либо желтое? Да прозрачное, вроде. А когда началось?",
+      "confidence": -0.49117827150556775,
+      "no_speech_prob": 0.08024820685386658,
+      "words": [
+        {
+          "word": " А",
+          "start": 19.2,
+          "end": 19.42,
+          "probability": 0.42760661244392395
+        },
+        {
+          "word": " макроты",
+          "start": 19.42,
+          "end": 20.32,
+          "probability": 0.8273543864488602
+        },
+        {
+          "word": " есть",
+          "start": 20.32,
+          "end": 20.9,
+          "probability": 0.7122418880462646
+        },
+        {
+          "word": " ли",
+          "start": 20.9,
+          "end": 21.16,
+          "probability": 0.9929949641227722
+        },
+        {
+          "word": " там",
+          "start": 21.16,
+          "end": 21.4,
+          "probability": 0.9620332717895508
+        },
+        {
+          "word": " прозрачное,",
+          "start": 21.4,
+          "end": 22.54,
+          "probability": 0.8722107708454132
+        },
+        {
+          "word": " либо",
+          "start": 22.7,
+          "end": 22.78,
+          "probability": 0.9583310484886169
+        },
+        {
+          "word": " желтое?",
+          "start": 22.78,
+          "end": 23.5,
+          "probability": 0.7061317463715872
+        },
+        {
+          "word": " Да",
+          "start": 24.2,
+          "end": 24.46,
+          "probability": 0.9369862079620361
+        },
+        {
+          "word": " прозрачное,",
+          "start": 24.46,
+          "end": 25.22,
+          "probability": 0.9549956023693085
+        },
+        {
+          "word": " вроде.",
+          "start": 25.38,
+          "end": 25.56,
+          "probability": 0.8757877945899963
+        },
+        {
+          "word": " А",
+          "start": 26.22,
+          "end": 26.42,
+          "probability": 0.9611005783081055
+        },
+        {
+          "word": " когда",
+          "start": 26.42,
+          "end": 26.66,
+          "probability": 0.982451856136322
+        },
+        {
+          "word": " началось?",
+          "start": 26.66,
+          "end": 27.12,
+          "probability": 0.9613641202449799
+        }
+      ],
+      "hygiene": {
+        "original_word_count": 14,
+        "cleaned_word_count": 14,
+        "removed_word_count": 0,
+        "removed_words": null
+      },
+      "merged_segments": [
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "start": 28.06,
+      "end": 31.58,
+      "text": "вторник, поздно с ночевого горла. Першение?",
+      "confidence": -0.5372724901857994,
+      "no_speech_prob": 0.012658252380788326,
+      "words": [
+        {
+          "word": " вторник,",
+          "start": 28.44,
+          "end": 29.42,
+          "probability": 0.8601973354816437
+        },
+        {
+          "word": " поздно",
+          "start": 29.58,
+          "end": 30.12,
+          "probability": 0.7092594901720682
+        },
+        {
+          "word": " с",
+          "start": 30.12,
+          "end": 30.46,
+          "probability": 0.5894443988800049
+        },
+        {
+          "word": " ночевого",
+          "start": 30.46,
+          "end": 30.82,
+          "probability": 0.5846952199935913
+        },
+        {
+          "word": " горла.",
+          "start": 30.82,
+          "end": 31.1,
+          "probability": 0.3296976424753666
+        },
+        {
+          "word": " Першение?",
+          "start": 31.1,
+          "end": 31.58,
+          "probability": 0.5878735184669495
+        }
+      ],
+      "hygiene": {
+        "original_word_count": 7,
+        "cleaned_word_count": 6,
+        "removed_word_count": 1,
+        "removed_words": [
+          {
+            "word": " Во",
+            "start": 28.06,
+            "end": 28.44,
+            "probability": 0.009191508404910564,
+            "removal_reason": "low_probability (0.009)"
+          }
+        ]
+      },
+      "merged_segments": [
+        9,
+        10
+      ]
+    },
+    {
+      "start": 32.46,
+      "end": 42.38,
+      "text": "Да, именно. Насморк, в горле, или одышко. Насморк есть, горло, как царапа, дышать нормально.",
+      "confidence": -0.5372724901857994,
+      "no_speech_prob": 0.012658252380788326,
+      "words": [
+        {
+          "word": " Да,",
+          "start": 32.46,
+          "end": 33.22,
+          "probability": 0.35398292541503906
+        },
+        {
+          "word": " именно.",
+          "start": 33.82,
+          "end": 33.82,
+          "probability": 0.9700260758399963
+        },
+        {
+          "word": " Насморк,",
+          "start": 34.38,
+          "end": 35.14,
+          "probability": 0.6465991228818894
+        },
+        {
+          "word": " в",
+          "start": 36.5,
+          "end": 36.5,
+          "probability": 0.9480037093162537
+        },
+        {
+          "word": " горле,",
+          "start": 36.5,
+          "end": 36.86,
+          "probability": 0.9860537350177765
+        },
+        {
+          "word": " или",
+          "start": 36.98,
+          "end": 37.08,
+          "probability": 0.8693367838859558
+        },
+        {
+          "word": " одышко.",
+          "start": 37.08,
+          "end": 37.64,
+          "probability": 0.6340240587790807
+        },
+        {
+          "word": " Насморк",
+          "start": 38.24,
+          "end": 39.0,
+          "probability": 0.9534249782562256
+        },
+        {
+          "word": " есть,",
+          "start": 39.0,
+          "end": 39.26,
+          "probability": 0.7900053858757019
+        },
+        {
+          "word": " горло,",
+          "start": 39.5,
+          "end": 39.9,
+          "probability": 0.5459278374910355
+        },
+        {
+          "word": " как",
+          "start": 40.0,
+          "end": 40.18,
+          "probability": 0.7923468947410583
+        },
+        {
+          "word": " царапа,",
+          "start": 40.18,
+          "end": 40.96,
+          "probability": 0.6581605970859528
+        },
+        {
+          "word": " дышать",
+          "start": 41.16,
+          "end": 41.84,
+          "probability": 0.645520972708861
+        },
+        {
+          "word": " нормально.",
+          "start": 41.84,
+          "end": 42.38,
+          "probability": 0.8067251443862915
+        }
+      ],
+      "hygiene": {
+        "original_word_count": 15,
+        "cleaned_word_count": 14,
+        "removed_word_count": 1,
+        "removed_words": null
+      },
+      "merged_segments": [
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "start": 43.22,
+      "end": 44.64,
+      "text": "А жара, понижающие, принимали?",
+      "confidence": -0.5372724901857994,
+      "no_speech_prob": 0.012658252380788326,
+      "words": [
+        {
+          "word": " А",
+          "start": 43.22,
+          "end": 43.32,
+          "probability": 0.9093998670578003
+        },
+        {
+          "word": " жара,",
+          "start": 43.32,
+          "end": 43.56,
+          "probability": 0.8575206696987152
+        },
+        {
+          "word": " понижающие,",
+          "start": 43.7,
+          "end": 44.18,
+          "probability": 0.8514596521854401
+        },
+        {
+          "word": " принимали?",
+          "start": 44.26,
+          "end": 44.64,
+          "probability": 0.9881235957145691
+        }
+      ],
+      "hygiene": {
+        "original_word_count": 4,
+        "cleaned_word_count": 4,
+        "removed_word_count": 0,
+        "removed_words": null
+      },
+      "merged_segments": [
+        14
+      ]
+    },
+    {
+      "start": 45.52,
+      "end": 48.86,
+      "text": "Да,-рацетому. По-рацетому, пиццот?",
+      "confidence": -0.5372724901857994,
+      "no_speech_prob": 0.012658252380788326,
+      "words": [
+        {
+          "word": " Да,",
+          "start": 45.52,
+          "end": 45.76,
+          "probability": 0.9380412101745605
+        },
+        {
+          "word": "-рацетому.",
+          "start": 46.02,
+          "end": 46.74,
+          "probability": 0.6333827286958694
+        },
+        {
+          "word": " По",
+          "start": 47.42,
+          "end": 48.06,
+          "probability": 0.34897300601005554
+        },
+        {
+          "word": "-рацетому,",
+          "start": 48.06,
+          "end": 48.34,
+          "probability": 0.9627519607543945
+        },
+        {
+          "word": " пиццот?",
+          "start": 48.46,
+          "end": 48.86,
+          "probability": 0.6527146827429533
+        }
+      ],
+      "hygiene": {
+        "original_word_count": 6,
+        "cleaned_word_count": 5,
+        "removed_word_count": 1,
+        "removed_words": [
+          {
+            "word": " по",
+            "start": 45.96,
+            "end": 46.02,
+            "probability": 0.17402340471744537,
+            "removal_reason": "low_probability (0.174)"
+          }
+        ]
+      },
+      "merged_segments": [
+        15,
+        16
+      ]
+    },
+    {
+      "start": 49.72,
+      "end": 55.38,
+      "text": "Да, два раза вчера помогать на пару часов. А если аллергия на лекарство?",
+      "confidence": -0.5372724901857994,
+      "no_speech_prob": 0.012658252380788326,
+      "words": [
+        {
+          "word": " Да,",
+          "start": 49.72,
+          "end": 50.06,
+          "probability": 0.9743471741676331
+        },
+        {
+          "word": " два",
+          "start": 50.46,
+          "end": 50.56,
+          "probability": 0.8866652846336365
+        },
+        {
+          "word": " раза",
+          "start": 50.56,
+          "end": 51.12,
+          "probability": 0.9647535085678101
+        },
+        {
+          "word": " вчера",
+          "start": 51.12,
+          "end": 51.8,
+          "probability": 0.8905527591705322
+        },
+        {
+          "word": " помогать",
+          "start": 51.8,
+          "end": 52.84,
+          "probability": 0.9412533640861511
+        },
+        {
+          "word": " на",
+          "start": 52.84,
+          "end": 52.96,
+          "probability": 0.8300507068634033
+        },
+        {
+          "word": " пару",
+          "start": 52.96,
+          "end": 53.24,
+          "probability": 0.9821911454200745
+        },
+        {
+          "word": " часов.",
+          "start": 53.24,
+          "end": 53.66,
+          "probability": 0.9831929206848145
+        },
+        {
+          "word": " А",
+          "start": 54.02,
+          "end": 54.12,
+          "probability": 0.9881207942962646
+        },
+        {
+          "word": " если",
+          "start": 54.12,
+          "end": 54.36,
+          "probability": 0.8153780698776245
+        },
+        {
+          "word": " аллергия",
+          "start": 54.36,
+          "end": 54.8,
+          "probability": 0.8296792209148407
+        },
+        {
+          "word": " на",
+          "start": 54.8,
+          "end": 54.96,
+          "probability": 0.8464511036872864
+        },
+        {
+          "word": " лекарство?",
+          "start": 54.96,
+          "end": 55.38,
+          "probability": 0.8012062013149261
+        }
+      ],
+      "hygiene": {
+        "original_word_count": 13,
+        "cleaned_word_count": 13,
+        "removed_word_count": 0,
+        "removed_words": null
+      },
+      "merged_segments": [
+        17,
+        18
+      ]
+    },
+    {
+      "start": 56.26,
+      "end": 65.4,
+      "text": "пенцилинные сыльбы детстве. Хорошо, я это отмечу. А если хронические заболевания, давления, сахар, астма?",
+      "confidence": -0.48940434001195127,
+      "no_speech_prob": 0.2561311721801758,
+      "words": [
+        {
+          "word": " пенцилинные",
+          "start": 56.68,
+          "end": 57.88,
+          "probability": 0.34727452993392943
+        },
+        {
+          "word": " сыльбы",
+          "start": 57.88,
+          "end": 58.38,
+          "probability": 0.3683967689673106
+        },
+        {
+          "word": " детстве.",
+          "start": 58.6,
+          "end": 59.12,
+          "probability": 0.9823193252086639
+        },
+        {
+          "word": " Хорошо,",
+          "start": 59.82,
+          "end": 60.56,
+          "probability": 0.6542055010795593
+        },
+        {
+          "word": " я",
+          "start": 60.78,
+          "end": 60.84,
+          "probability": 0.9803820848464966
+        },
+        {
+          "word": " это",
+          "start": 60.84,
+          "end": 60.98,
+          "probability": 0.7678952813148499
+        },
+        {
+          "word": " отмечу.",
+          "start": 60.98,
+          "end": 61.38,
+          "probability": 0.9232945740222931
+        },
+        {
+          "word": " А",
+          "start": 62.18,
+          "end": 62.26,
+          "probability": 0.8507804870605469
+        },
+        {
+          "word": " если",
+          "start": 62.26,
+          "end": 62.46,
+          "probability": 0.765201985836029
+        },
+        {
+          "word": " хронические",
+          "start": 62.46,
+          "end": 62.92,
+          "probability": 0.7557421127955118
+        },
+        {
+          "word": " заболевания,",
+          "start": 62.92,
+          "end": 63.48,
+          "probability": 0.9833824783563614
+        },
+        {
+          "word": " давления,",
+          "start": 63.66,
+          "end": 64.0,
+          "probability": 0.724068820476532
+        },
+        {
+          "word": " сахар,",
+          "start": 64.42,
+          "end": 64.78,
+          "probability": 0.9096454381942749
+        },
+        {
+          "word": " астма?",
+          "start": 64.96,
+          "end": 65.4,
+          "probability": 0.87320876121521
+        }
+      ],
+      "hygiene": {
+        "original_word_count": 16,
+        "cleaned_word_count": 14,
+        "removed_word_count": 2,
+        "removed_words": [
+          {
+            "word": " На",
+            "start": 56.26,
+            "end": 56.68,
+            "probability": 0.07282659411430359,
+            "removal_reason": "low_probability (0.073)"
+          },
+          {
+            "word": " в",
+            "start": 58.38,
+            "end": 58.6,
+            "probability": 0.19334959983825684,
+            "removal_reason": "low_probability (0.193)"
+          }
+        ]
+      },
+      "merged_segments": [
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "start": 66.42,
+      "end": 77.5,
+      "text": "Да, гипертония, лазартан, пятьдесят утра. Курения, алкоголь? Курилу, бросил два года, алкоголю, редко. А контакт заболевшими был?",
+      "confidence": -0.48940434001195127,
+      "no_speech_prob": 0.2561311721801758,
+      "words": [
+        {
+          "word": " Да,",
+          "start": 66.42,
+          "end": 66.58,
+          "probability": 0.7201866507530212
+        },
+        {
+          "word": " гипертония,",
+          "start": 66.76,
+          "end": 67.44,
+          "probability": 0.7629095196723938
+        },
+        {
+          "word": " лазартан,",
+          "start": 68.5,
+          "end": 69.0,
+          "probability": 0.5772276595234871
+        },
+        {
+          "word": " пятьдесят",
+          "start": 69.2,
+          "end": 69.48,
+          "probability": 0.6949225614468256
+        },
+        {
+          "word": " утра.",
+          "start": 69.48,
+          "end": 69.92,
+          "probability": 0.9186036884784698
+        },
+        {
+          "word": " Курения,",
+          "start": 70.22,
+          "end": 70.62,
+          "probability": 0.7744218111038208
+        },
+        {
+          "word": " алкоголь?",
+          "start": 70.9,
+          "end": 71.4,
+          "probability": 0.9707644432783127
+        },
+        {
+          "word": " Курилу,",
+          "start": 72.04,
+          "end": 72.88,
+          "probability": 0.8091258481144905
+        },
+        {
+          "word": " бросил",
+          "start": 73.02,
+          "end": 73.44,
+          "probability": 0.8638479113578796
+        },
+        {
+          "word": " два",
+          "start": 73.44,
+          "end": 73.66,
+          "probability": 0.753264307975769
+        },
+        {
+          "word": " года,",
+          "start": 73.66,
+          "end": 73.88,
+          "probability": 0.9973486661911011
+        },
+        {
+          "word": " алкоголю,",
+          "start": 74.16,
+          "end": 74.76,
+          "probability": 0.6880359470844268
+        },
+        {
+          "word": " редко.",
+          "start": 74.9,
+          "end": 75.32,
+          "probability": 0.7916525304317474
+        },
+        {
+          "word": " А",
+          "start": 75.88,
+          "end": 76.16,
+          "probability": 0.930989682674408
+        },
+        {
+          "word": " контакт",
+          "start": 76.16,
+          "end": 76.62,
+          "probability": 0.9073373675346375
+        },
+        {
+          "word": " заболевшими",
+          "start": 76.62,
+          "end": 77.22,
+          "probability": 0.884163749217987
+        },
+        {
+          "word": " был?",
+          "start": 77.22,
+          "end": 77.5,
+          "probability": 0.9617937207221985
+        }
+      ],
+      "hygiene": {
+        "original_word_count": 19,
+        "cleaned_word_count": 17,
+        "removed_word_count": 2,
+        "removed_words": [
+          {
+            "word": " опью,",
+            "start": 67.88,
+            "end": 68.04,
+            "probability": 0.19955088198184967,
+            "removal_reason": "low_probability (0.200)"
+          }
+        ]
+      },
+      "merged_segments": [
+        22,
+        23,
+        24,
+        25
+      ]
+    },
+    {
+      "start": 78.48,
+      "end": 84.06,
+      "text": "Да, коллега на работе, На прошлой неделе? На прошлой неделе. Понял.",
+      "confidence": -0.48940434001195127,
+      "no_speech_prob": 0.2561311721801758,
+      "words": [
+        {
+          "word": " Да,",
+          "start": 78.48,
+          "end": 78.72,
+          "probability": 0.968410849571228
+        },
+        {
+          "word": " коллега",
+          "start": 78.92,
+          "end": 79.3,
+          "probability": 0.9718165198961893
+        },
+        {
+          "word": " на",
+          "start": 79.3,
+          "end": 79.44,
+          "probability": 0.8541582822799683
+        },
+        {
+          "word": " работе,",
+          "start": 79.44,
+          "end": 79.96,
+          "probability": 0.9614999890327454
+        },
+        {
+          "word": " На",
+          "start": 80.1,
+          "end": 80.38,
+          "probability": 0.8917511105537415
+        },
+        {
+          "word": " прошлой",
+          "start": 80.38,
+          "end": 80.82,
+          "probability": 0.5091192722320557
+        },
+        {
+          "word": " неделе?",
+          "start": 80.82,
+          "end": 81.1,
+          "probability": 0.9899149537086487
+        },
+        {
+          "word": " На",
+          "start": 81.66,
+          "end": 82.18,
+          "probability": 0.7929003834724426
+        },
+        {
+          "word": " прошлой",
+          "start": 82.18,
+          "end": 82.62,
+          "probability": 0.7943102121353149
+        },
+        {
+          "word": " неделе.",
+          "start": 82.62,
+          "end": 83.14,
+          "probability": 0.9983359277248383
+        },
+        {
+          "word": " Понял.",
+          "start": 83.56,
+          "end": 84.06,
+          "probability": 0.9833590090274811
+        }
+      ],
+      "hygiene": {
+        "original_word_count": 12,
+        "cleaned_word_count": 11,
+        "removed_word_count": 1,
+        "removed_words": [
+          {
+            "word": " болезня.",
+            "start": 80.06,
+            "end": 80.1,
+            "probability": 0.2870091646909714,
+            "removal_reason": "low_probability (0.287)"
+          }
+        ]
+      },
+      "merged_segments": [
+        26,
+        27,
+        28,
+        29
+      ]
+    },
+    {
+      "start": 85.74,
+      "end": 87.46,
+      "text": "Откройте род, скажите, а?",
+      "confidence": -0.4946309474225228,
+      "no_speech_prob": 0.05897747352719307,
+      "words": [
+        {
+          "word": " Откройте",
+          "start": 85.74,
+          "end": 86.62,
+          "probability": 0.6432970147579908
+        },
+        {
+          "word": " род,",
+          "start": 86.62,
+          "end": 86.76,
+          "probability": 0.6060621738433838
+        },
+        {
+          "word": " скажите,",
+          "start": 86.9,
+          "end": 87.18,
+          "probability": 0.9519782960414886
+        },
+        {
+          "word": " а?",
+          "start": 87.4,
+          "end": 87.46,
+          "probability": 0.9067004919052124
+        }
+      ],
+      "hygiene": {
+        "original_word_count": 4,
+        "cleaned_word_count": 4,
+        "removed_word_count": 0,
+        "removed_words": null
+      },
+      "merged_segments": [
+        30
+      ]
+    },
+    {
+      "start": 88.96,
+      "end": 103.78,
+      "text": "Миндалины, умерены красные, налета нет. Сейчас послушаю, лёгкие, выдох, вдох, выдох, дыхание визикулярных рипов нет.",
+      "confidence": -0.4946309474225228,
+      "no_speech_prob": 0.05897747352719307,
+      "words": [
+        {
+          "word": " Миндалины,",
+          "start": 88.96,
+          "end": 89.84,
+          "probability": 0.6061747193336486
+        },
+        {
+          "word": " умерены",
+          "start": 90.18,
+          "end": 90.44,
+          "probability": 0.6456987460454305
+        },
+        {
+          "word": " красные,",
+          "start": 90.44,
+          "end": 91.0,
+          "probability": 0.8528604209423065
+        },
+        {
+          "word": " налета",
+          "start": 91.08,
+          "end": 91.34,
+          "probability": 0.5976834297180176
+        },
+        {
+          "word": " нет.",
+          "start": 91.34,
+          "end": 91.76,
+          "probability": 0.9552701115608215
+        },
+        {
+          "word": " Сейчас",
+          "start": 92.06,
+          "end": 92.24,
+          "probability": 0.9495331645011902
+        },
+        {
+          "word": " послушаю,",
+          "start": 92.24,
+          "end": 92.72,
+          "probability": 0.8459652662277222
+        },
+        {
+          "word": " лёгкие,",
+          "start": 92.8,
+          "end": 93.08,
+          "probability": 0.7626666277647018
+        },
+        {
+          "word": " выдох,",
+          "start": 93.76,
+          "end": 94.78,
+          "probability": 0.9593454003334045
+        },
+        {
+          "word": " вдох,",
+          "start": 95.04,
+          "end": 95.36,
+          "probability": 0.9779577851295471
+        },
+        {
+          "word": " выдох,",
+          "start": 95.78,
+          "end": 96.24,
+          "probability": 0.9499284029006958
+        },
+        {
+          "word": " дыхание",
+          "start": 101.44,
+          "end": 102.22,
+          "probability": 0.7687206168969473
+        },
+        {
+          "word": " визикулярных",
+          "start": 102.22,
+          "end": 103.04,
+          "probability": 0.7297345757484436
+        },
+        {
+          "word": " рипов",
+          "start": 103.04,
+          "end": 103.44,
+          "probability": 0.6714262167612711
+        },
+        {
+          "word": " нет.",
+          "start": 103.44,
+          "end": 103.78,
+          "probability": 0.9898948073387146
+        }
+      ],
+      "hygiene": {
+        "original_word_count": 15,
+        "cleaned_word_count": 15,
+        "removed_word_count": 0,
+        "removed_words": null
+      },
+      "merged_segments": [
+        31,
+        32,
+        33
+      ]
+    },
+    {
+      "start": 105.88,
+      "end": 109.94,
+      "text": "Температура держится. Ой, извините.",
+      "confidence": -0.4946309474225228,
+      "no_speech_prob": 0.05897747352719307,
+      "words": [
+        {
+          "word": " Температура",
+          "start": 105.88,
+          "end": 106.72,
+          "probability": 0.7563303746283054
+        },
+        {
+          "word": " держится.",
+          "start": 106.72,
+          "end": 107.5,
+          "probability": 0.9857654273509979
+        },
+        {
+          "word": " Ой,",
+          "start": 108.24,
+          "end": 109.12,
+          "probability": 0.7614760398864746
+        },
+        {
+          "word": " извините.",
+          "start": 109.46,
+          "end": 109.94,
+          "probability": 0.984539528687795
+        }
+      ],
+      "hygiene": {
+        "original_word_count": 4,
+        "cleaned_word_count": 4,
+        "removed_word_count": 0,
+        "removed_words": null
+      },
+      "merged_segments": [
+        34,
+        35
+      ]
+    },
+    {
+      "start": 114.13,
+      "end": 115.09,
+      "text": "Какая температура?",
+      "confidence": -0.4946309474225228,
+      "no_speech_prob": 0.05897747352719307,
+      "words": [
+        {
+          "word": " Какая",
+          "start": 114.13,
+          "end": 114.49,
+          "probability": 0.9691215753555298
+        },
+        {
+          "word": " температура?",
+          "start": 114.49,
+          "end": 115.09,
+          "probability": 0.9824755191802979
+        }
+      ],
+      "hygiene": {
+        "original_word_count": 2,
+        "cleaned_word_count": 2,
+        "removed_word_count": 0,
+        "removed_words": null
+      },
+      "merged_segments": [
+        36
+      ]
+    },
+    {
+      "start": 116.59,
+      "end": 119.25,
+      "text": "38 и 5 вчера вечером.",
+      "confidence": -0.4946309474225228,
+      "no_speech_prob": 0.05897747352719307,
+      "words": [
+        {
+          "word": " 38",
+          "start": 116.59,
+          "end": 117.41,
+          "probability": 0.6998090147972107
+        },
+        {
+          "word": " и",
+          "start": 117.41,
+          "end": 118.07,
+          "probability": 0.5608533024787903
+        },
+        {
+          "word": " 5",
+          "start": 118.07,
+          "end": 118.27,
+          "probability": 0.8951733112335205
+        },
+        {
+          "word": " вчера",
+          "start": 118.27,
+          "end": 118.71,
+          "probability": 0.6860512793064117
+        },
+        {
+          "word": " вечером.",
+          "start": 118.71,
+          "end": 119.25,
+          "probability": 0.9672908186912537
+        }
+      ],
+      "hygiene": {
+        "original_word_count": 5,
+        "cleaned_word_count": 5,
+        "removed_word_count": 0,
+        "removed_words": null
+      },
+      "merged_segments": [
+        37
+      ]
+    },
+    {
+      "start": 122.25,
+      "end": 127.67,
+      "text": "Картина за вирусную идеологию. Антибиотик сейчас не показан.",
+      "confidence": -0.45601227989903204,
+      "no_speech_prob": 0.38188764452934265,
+      "words": [
+        {
+          "word": " Картина",
+          "start": 122.25,
+          "end": 123.33,
+          "probability": 0.7008992433547974
+        },
+        {
+          "word": " за",
+          "start": 123.33,
+          "end": 123.49,
+          "probability": 0.5629904866218567
+        },
+        {
+          "word": " вирусную",
+          "start": 123.49,
+          "end": 124.09,
+          "probability": 0.9290486574172974
+        },
+        {
+          "word": " идеологию.",
+          "start": 124.09,
+          "end": 125.15,
+          "probability": 0.8410582741101583
+        },
+        {
+          "word": " Антибиотик",
+          "start": 125.53,
+          "end": 126.39,
+          "probability": 0.7723706066608429
+        },
+        {
+          "word": " сейчас",
+          "start": 126.39,
+          "end": 126.69,
+          "probability": 0.9620455503463745
+        },
+        {
+          "word": " не",
+          "start": 126.69,
+          "end": 127.03,
+          "probability": 0.9645482897758484
+        },
+        {
+          "word": " показан.",
+          "start": 127.03,
+          "end": 127.67,
+          "probability": 0.9617645144462585
+        }
+      ],
+      "hygiene": {
+        "original_word_count": 8,
+        "cleaned_word_count": 8,
+        "removed_word_count": 0,
+        "removed_words": null
+      },
+      "merged_segments": [
+        38,
+        39
+      ]
+    }
+  ],
+  "language": "ru",
+  "duration": 136.6613125,
+  "processing_time": 20.392337799072266,
+  "average_confidence": -0.5011462306179453,
+  "merge_stats": {
+    "original_count": 40,
+    "merged_count": 18,
+    "reduction_count": 22,
+    "reduction_pct": 55.00000000000001
+  }
+}

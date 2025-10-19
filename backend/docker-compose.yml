@@ -1,0 +1,193 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:16-alpine
+    container_name: doctalk_postgres
+    env_file:
+      - .env
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-doktalk_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB:-doktalk_dev}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U doktalk_user"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - doctalk_network
+
+  # Redis (for ARQ task queue)
+  redis:
+    image: redis:7-alpine
+    container_name: doctalk_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - doctalk_network
+
+  # MinIO (S3-compatible object storage for audio files)
+  minio:
+    image: minio/minio:latest
+    container_name: doctalk_minio
+    command: server /data --console-address ":9001"
+    env_file:
+      - .env
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+    ports:
+      - "9000:9000"  # API
+      - "9001:9001"  # Console UI
+    volumes:
+      - minio_data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 30s
+      timeout: 20s
+      retries: 3
+    networks:
+      - doctalk_network
+
+  # MinIO Client (mc) - for initial bucket creation
+  minio_client:
+    image: minio/mc:latest
+    container_name: doctalk_minio_client
+    env_file:
+      - .env
+    depends_on:
+      - minio
+    entrypoint: >
+      /bin/sh -c "
+      sleep 5;
+      mc alias set myminio http://minio:9000 $${MINIO_ROOT_USER} $${MINIO_ROOT_PASSWORD};
+      mc mb myminio/audio-recordings --ignore-existing;
+      mc mb myminio/audio-temp --ignore-existing;
+      mc policy set public myminio/audio-recordings;
+      exit 0;
+      "
+    networks:
+      - doctalk_network
+
+  # FastAPI Application
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: doctalk_api
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    env_file:
+      - .env
+    environment:
+      # Database (using .env variables)
+      DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
+
+      # Redis
+      REDIS_URL: ${REDIS_URL:-redis://redis:6379/0}
+
+      # MinIO (using .env variables)
+      MINIO_ENDPOINT: ${MINIO_ENDPOINT:-minio:9000}
+      MINIO_ACCESS_KEY: ${MINIO_ROOT_USER}
+      MINIO_SECRET_KEY: ${MINIO_ROOT_PASSWORD}
+      MINIO_BUCKET_RECORDINGS: ${MINIO_BUCKET_RECORDINGS:-audio-recordings}
+      MINIO_USE_SSL: ${MINIO_USE_SSL:-false}
+      MINIO_REGION: ${MINIO_REGION:-ru-central-1}
+
+      # App (from .env)
+      APP_DEBUG: ${APP_DEBUG:-true}
+      APP_ENV: ${APP_ENV:-development}
+      SECRET_KEY: ${SECRET_KEY}
+
+      # CORS (from .env)
+      CORS_ORIGINS: ${CORS_ORIGINS}
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - /app/.venv  # Don't mount venv from host
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+    networks:
+      - doctalk_network
+
+  # ARQ Worker (Background Tasks)
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: doctalk_worker
+    command: python -m app.worker
+    env_file:
+      - .env
+    environment:
+      # Database (using .env variables)
+      DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
+
+      # Redis
+      REDIS_URL: ${REDIS_URL:-redis://redis:6379/0}
+      ARQ_REDIS_URL: redis://redis:6379/0
+
+      # MinIO (using .env variables)
+      MINIO_ENDPOINT: ${MINIO_ENDPOINT:-minio:9000}
+      MINIO_ACCESS_KEY: ${MINIO_ROOT_USER}
+      MINIO_SECRET_KEY: ${MINIO_ROOT_PASSWORD}
+      MINIO_BUCKET_RECORDINGS: ${MINIO_BUCKET_RECORDINGS:-audio-recordings}
+      MINIO_USE_SSL: ${MINIO_USE_SSL:-false}
+      MINIO_REGION: ${MINIO_REGION:-ru-central-1}
+
+      # App
+      APP_DEBUG: ${APP_DEBUG:-true}
+      APP_ENV: ${APP_ENV:-development}
+
+      # Whisper (for transcription - from .env)
+      WHISPER_MODEL: ${WHISPER_MODEL:-base}  # tiny, base, small, medium, large-v3
+      WHISPER_DEVICE: ${WHISPER_DEVICE:-cpu}  # cpu or cuda
+    volumes:
+      - .:/app
+      - /app/.venv
+      - whisper_models:/root/.cache/whisper  # Cache Whisper models
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+    networks:
+      - doctalk_network
+    # GPU Support (uncomment if you have NVIDIA GPU and nvidia-docker installed)
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]
+
+volumes:
+  postgres_data:
+  redis_data:
+  minio_data:
+  whisper_models:
+
+networks:
+  doctalk_network:
+    driver: bridge

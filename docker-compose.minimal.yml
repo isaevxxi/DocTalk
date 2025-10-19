@@ -1,0 +1,62 @@
+# Ultra-Minimal Docker Compose for Initial Development
+# Just PostgreSQL + Redis - the absolute essentials
+# Run with: make up
+
+services:
+  # =============================================================================
+  # Database - PostgreSQL 16 with pgvector
+  # =============================================================================
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: doktalk-postgres
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-doktalk}
+      POSTGRES_USER: ${POSTGRES_USER:-doktalk_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-password}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-doktalk_user}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - doktalk-network
+    restart: unless-stopped
+    # Note: pg_hba.conf is configured for MD5 auth on first start.
+    # If you recreate the container, run these commands to fix auth:
+    #   docker exec doktalk-postgres bash -c "echo 'host all all 0.0.0.0/0 md5' >> /var/lib/postgresql/data/pg_hba.conf"
+    #   docker exec doktalk-postgres psql -U doktalk_user -d doktalk -c "ALTER USER doktalk_user WITH PASSWORD 'password';"
+    #   docker restart doktalk-postgres
+
+  # =============================================================================
+  # Cache & Message Broker - Redis
+  # =============================================================================
+  redis:
+    image: redis:8.2-alpine
+    container_name: doktalk-redis
+    command: redis-server --requirepass ${REDIS_PASSWORD:-password} --maxmemory 256mb --maxmemory-policy allkeys-lru
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "--raw", "incr", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    networks:
+      - doktalk-network
+    restart: unless-stopped
+
+networks:
+  doktalk-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local

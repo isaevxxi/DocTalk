@@ -1,0 +1,42 @@
+[
+  {
+    "test_name": "Baseline (No Vocabulary)",
+    "vocab_file": "None",
+    "vocab_size": 258,
+    "init_time": 7.225777864456177,
+    "transcription_time": 39.027487993240356,
+    "audio_duration": 13.4908125,
+    "real_time_factor": 2.892893811491365,
+    "plain_text": "Её четыре кариеса, потому что вы не говорили ходить на осмотры раз в полгода. Но мы говорили, есть что надо ходить на профосмотры регулярно. Да, я не знал, что надо ходить на горохоциатры."
+  },
+  {
+    "test_name": "Small Vocabulary (50 words)",
+    "vocab_file": "medical_vocabulary_ru_50.txt",
+    "vocab_size": 56,
+    "init_time": 2.6622250080108643,
+    "transcription_time": 30.242395639419556,
+    "audio_duration": 13.4908125,
+    "real_time_factor": 2.2417030582420114,
+    "plain_text": "Её четыре кариеса, потому что вы не говорили ходить на осмотры раз в полгода. Но мы говорили, надо ходить на профосмотры регулярно. Да я не знал, что надо ходить на горохоциатры."
+  },
+  {
+    "test_name": "Medium Vocabulary (150 words)",
+    "vocab_file": "medical_vocabulary_ru_150.txt",
+    "vocab_size": 173,
+    "init_time": 1.2401843070983887,
+    "transcription_time": 26.890682220458984,
+    "audio_duration": 13.4908125,
+    "real_time_factor": 1.993258910125612,
+    "plain_text": "Её четыре кариеса, потому что вы не говорили ходить на осмотры раз в полгода. Но мы говорили, надо ходить на профосмотры регулярно. Да я не знал, что надо ходить на горохоснотры."
+  },
+  {
+    "test_name": "Large Vocabulary (280 words)",
+    "vocab_file": "medical_vocabulary_ru.txt",
+    "vocab_size": 258,
+    "init_time": 1.2911951541900635,
+    "transcription_time": 27.42599320411682,
+    "audio_duration": 13.4908125,
+    "real_time_factor": 2.0329385798013884,
+    "plain_text": "Её четыре кариеса, потому что вы не говорили ходить на осмотры раз в полгода. Но мы говорили, есть что надо ходить на профосмотры регулярно. Да, я не знал, что надо ходить на горохоциатры."
+  }
+]
